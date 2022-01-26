@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Fit - Immo</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <div class="d-flex bg-grad-green w-100 h-100">
+            <div class="box">
+                <div class="project">
+                    <h1>Fit Zavatra - Immo</h1>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <label for="bedroom">Bedroom :</label>
+                        <input type="number">
+                        <br>
+                        <label for="bathroom">Bathroom :</label>
+                        <input type="number">
+                        <br>
+                        <label for="bedroom">Floor size :</label>
+                        <input type="number" id="textInput">
+                        <input type="range" name="rangeInput" step="50" min="0" max="10000" oninput="updateTextInput(this.value)" onchange="updateTextInput(this.value);">
+                    </form>
+                </div>
+                <div class="nav">
+                    <div class="nav-container">
+                        <button>Next <span class="disabled">1/2</span></button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="script/rangeManagement.js">
+
+    </script>
+</html>
