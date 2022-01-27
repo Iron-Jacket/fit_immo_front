@@ -3,32 +3,67 @@
         <title>Fit - Immo</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <div class="d-flex bg-grad-green w-100 h-100">
-            <div class="box">
-                <div class="project">
-                    <h1>Fit Zavatra - Immo</h1>
+    <div class="container">
+        <form action="#" class="form">
+            <h1 class="text-center">Icon - Fit Immo</h1>
+            <!-- Progress bar -->
+                <div class="progress-bar">
+                    <div class="progress-step" data-title="Room"></div>
+                    <div class="progress-step" data-title="Parking"></div>
+                    <div class="progress-step" data-title="Price"></div>
                 </div>
-                <div class="form">
-                    <form action="">
-                        <label for="bedroom">Bedroom :</label>
-                        <input type="number">
-                        <br>
-                        <label for="bathroom">Bathroom :</label>
-                        <input type="number">
-                        <br>
-                        <label for="bedroom">Floor size :</label>
-                        <input type="number" id="textInput">
-                        <input type="range" name="rangeInput" step="50" min="0" max="10000" oninput="updateTextInput(this.value)" onchange="updateTextInput(this.value);">
-                    </form>
+
+            <!-- Steps -->
+            <div class="form-step form-active">
+                <div class="input-group">
+                    <label for="bedroom">Bedroom</label>
+                    <input type="number" name="bedroom" id="bedroom">
                 </div>
-                <div class="nav">
-                    <div class="nav-container">
-                        <button>Next <span class="disabled">1/2</span></button>
+                <div class="input-group">
+                    <label for="bathroom">Bathroom</label>
+                    <input type="number" name="bathroom" id="bathroom">
+                </div>
+                <div class="input-group">
+                    <label for="rfsize">Size</label>
+                    <div class="input-linked">
+                        <input type="number" name="rfsize" id="rfsize">
+                        <input type="range">
                     </div>
                 </div>
+                <div class="button-group">
+                    <a class="btn btn-next ml-auto"href="#">Next</a>
+                </div>
             </div>
+    
+           
+    
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="parking">Parking</label>
+                    <input type="number" name="parking" id="parking">
+                <div class="input-group">
+                    <label for="score">Score</label>
+                    <input type="number" min="0" max="100" name="score" id="score">
+                </div>
+                <div class="button-group">
+                    <a class="btn btn-previous "href="#">Previous</a>
+                    <a class="btn btn-next "href="#">Predict</a>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="price">Price</label>
+                    <input type="number" name="price" id="price">
+                </div>
+                <div class="button-group">
+                    <a class="btn btn-previous mr-auto"href="#">Previous</a>
+                </div>
+            </div>
+
+
+        </form>
     </div>
     <script src="script/rangeManagement.js">
-
     </script>
 </html>
