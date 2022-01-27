@@ -53,3 +53,7 @@ function updateProgressBar(){
     progress.style.width = (((progressActive.length-1)/(progressSteps.length-1))*100) +"%"
 
 }
+
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val; 
+  }

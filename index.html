@@ -40,21 +40,19 @@
                 </div>
                 <div class="input-group">
                     <label for="score">Score</label>
-                    <input type="number" min="0" max="100" name="score" id="score">
+                    <input type="number" id="score">
                 </div>
                 <div class="button-group">
                     <a class="btn btn-previous" href="#">Previous</a>
-                    <a class="btn btn-next" href="#">Nex</a>
+                    <a class="btn btn-next" href="#">Next</a>
                 </div>
             </div>
 
             <div class="form-step">
                 <div class="input-group">
                     <label for="rfsize">Size</label>
-                    <div class="input-linked">
                         <input type="number" name="rfsize" id="rfsize">
-                    </div>
-                    <input type="range">
+                    <input type="range"min="0" max="10000" step="50" name="score" ondrag="updateTextInput(value)" onchange="updateTextInput(this.value)" >
                 </div>
                 <div class="button-group">
                     <a class="btn btn-previous" href="#">Previous</a>
