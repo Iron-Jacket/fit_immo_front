@@ -55,5 +55,5 @@ function updateProgressBar(){
 }
 
 function updateTextInput(val) {
-    document.getElementById('textInput').value=val; 
+    document.getElementById('rfsize').value=val; 
   }

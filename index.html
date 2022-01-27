@@ -51,8 +51,8 @@
             <div class="form-step">
                 <div class="input-group">
                     <label for="rfsize">Size</label>
-                        <input type="number" name="rfsize" id="rfsize">
-                    <input type="range"min="0" max="10000" step="50" name="score" ondrag="updateTextInput(value)" onchange="updateTextInput(this.value)" >
+                    <input type="number" name="rfsize" id="rfsize">
+                    <input type="range"min="0" max="10000" step="50" name="score" oninput="updateTextInput(this.value)" onchange="updateTextInput(this.value)" >
                 </div>
                 <div class="button-group">
                     <a class="btn btn-previous" href="#">Previous</a>
