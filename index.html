@@ -21,12 +21,17 @@
             <!-- Steps 1 -->
             <div class="form-step form-active">
                 <div class="input-group">
-                    <label for="bedroom">Bedroom</label>
-                    <input type="number" name="bedroom" id="bedroom">
+                    <label for="bedroom">Type of Proprety</label>
+                    <select id="cars" name="Type of Proprety">
+                        <option value="Apartement/Flat">Apartement/Flat</option>
+                        <option value="House">House</option>
+                        <option value="Townhouse">Townhouse</option>
+                      </select>
                 </div>
                 <div class="input-group">
-                    <label for="bathroom">Bathroom</label>
-                    <input type="number" name="bathroom" id="bathroom">
+                    <!-- Debug : Select from json source only allowed (157) -->
+                    <label for="Street Address">Street Address</label>
+                    <input type="text" name="Address" id="Address">
                 </div>
                 <div class="button-group">
                     <a href="#" style="cursor: auto;"></a>
@@ -38,13 +43,18 @@
             <!-- Steps 2 -->
             <div class="form-step">
                 <div class="input-group">
-                    <label for="parking">Parking</label>
-                    <input type="number" name="parking" id="parking">
+                    <!-- Debug : send m² unit in form ? -->
+                    <label for="rfsize">Erf Size</label>
+                    <input type="number" name="rfsize" id="rfsize">
+                    <input type="range"min="0" max="10000" step="50" name="score" oninput="updateTextInput(this.value)" onchange="updateTextInput(this.value)" >
                 </div>
                 <div class="input-group">
-                    <label for="score">Score</label>
-                    <input type="number" id="score">
+                    <!-- Debug : send m² unit in form ? -->
+                    <label for="Floor Size">Floor Size</label>
+                    <input type="number" name="floorSize" id="floorSize">
+                    <input type="range"min="0" max="10000" step="50" name="floorSize" oninput="updateTextInput(this.value)" onchange="updateTextInput(this.value)" >
                 </div>
+                
                 <div class="button-group">
                     <a class="btn btn-previous" href="#">Previous</a>
                     <a class="btn btn-next" href="#">Next</a>
@@ -54,9 +64,12 @@
             <!-- Steps 3 -->
             <div class="form-step">
                 <div class="input-group">
-                    <label for="rfsize">Size</label>
-                    <input type="number" name="rfsize" id="rfsize">
-                    <input type="range"min="0" max="10000" step="50" name="score" oninput="updateTextInput(this.value)" onchange="updateTextInput(this.value)" >
+                    <label for="bedroom">Bedroom</label>
+                    <input type="number" name="bedroom" id="bedroom">
+                </div>
+                <div class="input-group">
+                    <label for="bathroom">Bathroom</label>
+                    <input type="number" name="bathroom" id="bathroom">
                 </div>
                 <div class="button-group">
                     <a class="btn btn-previous" href="#">Previous</a>
@@ -65,6 +78,22 @@
             </div>
 
             <!-- Steps 4 -->
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="bedroom">Bedroom</label>
+                    <input type="number" name="bedroom" id="bedroom">
+                </div>
+                <div class="input-group">
+                    <label for="bathroom">Bathroom</label>
+                    <input type="number" name="bathroom" id="bathroom">
+                </div>
+                <div class="button-group">
+                    <a class="btn btn-previous" href="#">Previous</a>
+                    <a class="btn btn-next btn-submitS"href="#">Next</a>
+                </div>
+            </div>
+
+            <!-- Steps 5 -->
             <div class="form-step">
                 <div class="input-group">
                     <label for="price">Price</label>
