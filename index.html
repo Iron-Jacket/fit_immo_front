@@ -4,8 +4,10 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <div class="container">
-        <form action="#" class="form">
+
+        <form action="{{url_for('predict')}}" method="post"class="form">
             <h1 class="text-center">Icon - Fit Immo</h1>
+            
             <!-- Progress bar -->
                 <div class="progress-bar">
                     <div class="progress" id="progress"></div>
@@ -16,7 +18,7 @@
                     <div class="progress-step" data-title="Price"></div>
                 </div>
 
-            <!-- Steps -->
+            <!-- Steps 1 -->
             <div class="form-step form-active">
                 <div class="input-group">
                     <label for="bedroom">Bedroom</label>
@@ -32,7 +34,8 @@
                 </div>
             </div>
            
-    
+            
+            <!-- Steps 2 -->
             <div class="form-step">
                 <div class="input-group">
                     <label for="parking">Parking</label>
@@ -48,6 +51,7 @@
                 </div>
             </div>
 
+            <!-- Steps 3 -->
             <div class="form-step">
                 <div class="input-group">
                     <label for="rfsize">Size</label>
@@ -60,10 +64,11 @@
                 </div>
             </div>
 
+            <!-- Steps 4 -->
             <div class="form-step">
                 <div class="input-group">
                     <label for="price">Price</label>
-                    <input type="number" name="price" id="price">
+                    <input type="number" name="price" id="price" value="{{prediction_text}}">
                 </div>
                 <div class="button-group">
                     <a class="btn btn-previous"href="#">Previous</a>
